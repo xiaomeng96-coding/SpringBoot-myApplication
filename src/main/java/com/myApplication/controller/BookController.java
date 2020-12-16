@@ -1,29 +1,26 @@
 package com.myApplication.controller;
 
-import com.myApplication.service.MongoDbService;
 import com.myApplication.entity.Book;
+import com.myApplication.service.MongoDbService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /*SpringBoot整合mongodb*/
 
-@Controller
-public class MongoDbController {
+@RestController
+public class BookController {
 
     @Autowired
     private MongoDbService mongoDbService;
 
-    @PostMapping("/mongo/save")
-    @ResponseBody
+    @RequestMapping(value = "/mongo/save",method = RequestMethod.PUT)
     public String saveObj(@RequestBody Book book) {
         return mongoDbService.saveObj(book);
     }
 
-    @RequestMapping(value = "hello", method = RequestMethod.GET)
-    @ResponseBody
+    @GetMapping(value = "hello")
     public String hello() {
         return "Hello SpringBoot!";
     }

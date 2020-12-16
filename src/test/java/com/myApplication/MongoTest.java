@@ -51,7 +51,7 @@ public class MongoTest {
 //        Query query = new Query(Criteria.where("name").is("name1").and("unicode").is("e24928f8-ef7a-479d-8211-fb4e01c344f5"));
         Student student = new Student();
         student.setName("name1");
-        student.setUnicode("e24928f8-ef7a-479d-8211-fb4e01c344f5");
+        student.setUnicode("9e357e59-91fb-434a-b9e5-a6caba58d874");
         Query query = new Query(Criteria.byExample(student));
         List<Student> students = mongoTemplate.find(query, Student.class);
         System.out.println(students);

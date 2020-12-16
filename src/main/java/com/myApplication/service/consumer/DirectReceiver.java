@@ -1,4 +1,4 @@
-package com.myApplication.service;
+package com.myApplication.service.consumer;
 
 import com.myApplication.entity.Book;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
-@RabbitListener(queues = "TestDirectQueue")//监听的队列名称 TestDirectQueue
+@RabbitListener(queues = "test_queue")     //监听的队列名称 TestDirectQueue
 public class DirectReceiver {
 
     @RabbitHandler

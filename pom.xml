@@ -31,6 +31,7 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!--mongodb-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
@@ -48,6 +49,14 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.75</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.6</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
