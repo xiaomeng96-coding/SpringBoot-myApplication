@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 // 生产者发送消息需要配置队列和路由键
 @Configuration
 public class DirectRabbitConfig {
+
     // 队列 起名：TestDirectQueue
     @Bean
     public Queue TestDirectQueue() {
@@ -37,6 +38,12 @@ public class DirectRabbitConfig {
     @Bean
     Binding bindingDirect() {
         return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("test_queue");
+    }
+
+    // 不绑定任何队列
+    @Bean
+    DirectExchange lonelyDirectExchange() {
+        return new DirectExchange("lonelyDirectExchange");
     }
 
     // 配置转换器
