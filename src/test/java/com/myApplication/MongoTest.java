@@ -46,6 +46,7 @@ public class MongoTest {
         System.out.println(students);
     }
 
+
     @Test
     void findByNameAndUnicode() {
 //        Query query = new Query(Criteria.where("name").is("name1").and("unicode").is("e24928f8-ef7a-479d-8211-fb4e01c344f5"));

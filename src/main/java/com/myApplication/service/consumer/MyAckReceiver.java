@@ -2,7 +2,6 @@ package com.myApplication.service.consumer;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-@RabbitListener(queues = "test_queue")
 public class MyAckReceiver implements ChannelAwareMessageListener {
 
     @Override

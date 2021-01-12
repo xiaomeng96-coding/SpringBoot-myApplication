@@ -1,4 +1,3 @@
-/*
 package com.myApplication.service.consumer;
 
 import com.myApplication.entity.Book;
@@ -30,4 +29,3 @@ public class DirectReceiver {
         System.out.println("DirectReceiver消费者收到消息  : " + book);
     }
 }
-*/

@@ -27,6 +27,11 @@ public class DirectRabbitConfig {
         return new Queue("test_queue", true);
     }
 
+    @Bean
+    public Queue TestDirectQueue1(){
+        return new Queue("TestDirectQueue",true);
+    }
+
     // Direct交换机 起名：TestDirectExchange
     @Bean
     DirectExchange TestDirectExchange() {
@@ -38,6 +43,11 @@ public class DirectRabbitConfig {
     @Bean
     Binding bindingDirect() {
         return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("test_queue");
+    }
+
+    @Bean
+    Binding bindingDirect1() {
+        return BindingBuilder.bind(TestDirectQueue1()).to(TestDirectExchange()).with("TestDirectQueue");
     }
 
     // 不绑定任何队列
